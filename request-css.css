@@ -1,0 +1,10 @@
+.request-options {
+width:25%;
+display:inline-block; 
+border: solid 3px black; 
+margin: 3px; 
+}
+.radio-request{
+width:100%;
+text-align: center;
+}
