@@ -1,0 +1,19 @@
+/*remove the default body margin to get the inline block correct 
+/* Vertically align the form labels - each legend*/
+legend {
+margin:0 auto;
+}
+
+.address,.contact{
+    /*display:inline-block;*/
+
+    /* use display inline block and nowrap the white-space in the body container 
+    to have them display side by side */
+    width:50%;
+    /* float elements left to allow them to lie next to each other */
+    float:left;
+    box-sizing:border-box;
+}
+input {
+    padding:10px;
+}
