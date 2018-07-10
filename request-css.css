@@ -1,10 +1,25 @@
-.request-options {
-width:25%;
-display:inline-block; 
-border: solid 3px black; 
-margin: 3px; 
+ul {
+width: 100%;
+float:left;
 }
-.radio-request{
+.request-options {
+/* list container should have set height for columns 
+float all list items/columns - makes them line up horizontally 
+ 
+float container div - makes the container fit the tallest height of the column 
+if we dont float the containder -then list items will over flows 
+*/
+/* set up float and width so objects will have a max height */
+float: left;
+width:25%;
+height:150px;
+/* do not use inline block in this case 
+display:inline-block; 
+*/
+border: solid 3px black; 
+margin: 7px; 
+}
+.cost-request, .tip-request{
 width:100%;
 text-align: center;
 }

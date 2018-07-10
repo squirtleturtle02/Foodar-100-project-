@@ -7,9 +7,10 @@
 <meta charset = "utf-8">
 <link rel="stylesheet" href="style.css" type="text/css"> 
 <link rel="stylesheet" href="request-css.css" type="text/css">
-</head> 
 
+</head> 
 <body>
+       
 <section class="header">
     <h1>SUBMIT YOUR REQUEST</h1>
 </section>
@@ -22,33 +23,35 @@
 <br>
 <p>Choose your style: </p>
 <div class="Choose-your-style"> 
+        <form name="food"> 
     <ul>
         <li class="request-options">
             <label for="classic">  <p> Classic <br>
                 This is a classic treatment
             </p> 
             </label>
-            <input class="radio-request" type="radio" id="classic" name="classic"/>
+            <input class="cost-request" value = "3" type="radio"  name="cost" data-price="3">
         </li>
         <li class="request-options">
             <label for="premium"> <p> Premium <br>
             pinky's up
         </p> 
             </label> 
-            <input class="radio-request" type="radio" id="premium" name="premium"/>
+            <input class="cost-request" value="5" type="radio" name="cost" data-price="5">
         </li>
         <li class="request-options">
             <label for="royal"> <p>Royal <br>
                 Your food is served on a silver platter, Literally
             </p>
             </label>
-            <input class="radio-request" type="radio" id="royal" name= "royal"/> 
+            <input class="cost-request" value="10" type="radio" name= "cost" data-price="10"/>
         </li>
     </ul>
+</form>
 </div>
     <h3> Restaurant: </h3>
     <br>
-    <input type="restaurant-name" name="restaurant-name" placeholder="restaurant-name">
+    <input type="text" name="restaurant-name" placeholder="restaurant name">
     <br> 
     <h3>Tip </h3> 
     <ul>
@@ -58,22 +61,69 @@
                         They did their job 
                     </p>
                     </label>
-                    <input class="radio-request" type="radio" id=".1" name= ".1"/> 
+                    <input class="tip-request" value=".1" type="radio" id=".1" name= "tip"> 
                 </li>
                 <li class="request-options">
                         <label for=".15"> <p>15% <br>
                            They made you feel special 
                         </p>
                         </label>
-                        <input class="radio-request" type="radio" id=".15" name= ".15"/> 
+                        <input class="tip-request" value =".15" type="radio" id=".15" name= "tip">
                     </li>
                     <li class="request-options">
                             <label for=".20"> <p>20% <br>
                                I wanna give them more, but this is all I have!`
                             </p>
                             </label>
-                            <input class="radio-request" type="radio" id=".20" name= ".20"/> 
+                            <input class="tip-request" type="radio" value =".20" id=".20" name= "tip"> 
                         </li>
 </ul>
 
+<h2 id="total">Total:</h2> 
+<button> request </button>
+<script>
+        //set a query selector on all input values 
+         var costList=document.querySelectorAll(".cost-request");
+        console.log(costList);   
+    
+        var tipList=document.querySelectorAll(".tip-request")
+        console.log(tipList);
+        var newTotal=0;
+        costList.forEach(function(el) {
+            el.addEventListener("click", function() {
+                     newTotal=0;
+                    for (i=0;i< costList.length; i++) {
+                        if( costList[i].checked) {
+                            var temp = Number( costList[i].value)
+                            newTotal= newTotal+ temp;
+                            console.log(newTotal)
+                            document.getElementById("total").innerHTML=newTotal;
+                                                    }
+                        }
+            }
+            )
+        }  
+        )
+        
+                        //apply the tip to the total 
+                     
+                      //  var newTotal=0;
+        tipList.forEach(function(el) {
+            el.addEventListener("click", function() {
+
+                    for (i=0;i< costList.length; i++) {
+                        if( tipList[i].checked) {
+                            var temp = Number( tipList[i].value)
+                            newTotal=( newTotal* temp)+newTotal;
+                            console.log(newTotal)
+                            document.getElementById("total").innerHTML=newTotal;
+                                                    }
+                        }
+
+                    }
+                )
+            }
+            )
+    </script>
+    
 </body>
