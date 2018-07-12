@@ -10,10 +10,11 @@
 
 </head> 
 <body>
-        <div class="banner">
-                <img src="photos\Order_Banner.jpg">
-                
-            </div>      
+    <!-- BANNER -->
+        <div id="banner">
+                     
+                <button id="clear" type="button"> Clear Banner </button>
+        </div>      
 <section class="header">
     <h1>SUBMIT YOUR REQUEST</h1>
 </section>
@@ -107,9 +108,7 @@
             )
         }  
         )
-        
                         //apply the tip to the total 
-                     
                       //  var newTotal=0;
         tipList.forEach(function(el) {
             el.addEventListener("click", function() {
@@ -127,6 +126,40 @@
                 )
             }
             )
+
+            //add banner after 5 seconds 
+        function setBanner() {
+        //create img element 
+        var adbanner = document.createElement("img");
+
+        //set attribute - id to adBanner 
+        adbanner.setAttribute("id", "adBanner");
+        //set the source
+        adbanner.src="photos/Order_Banner.jpg";
+
+        //select the banner div 
+        var changeBanner = document.getElementById("banner");
+
+        //add the image to the parent 
+        changeBanner.appendChild(adbanner)
+    }
+
+    //setTimer to show banner after 5 seconds 
+     setTimeout(setBanner, 5000);
+
+    var btn = document.getElementById("clear");
+
+    btn.addEventListener("click", clearBanner)
+
+    function clearBanner() {
+    //get parent element 
+    var parentDiv = document.getElementById("banner")
+    //get child banner 
+    var adbanner = document.getElementById("adBanner")
+
+    parentDiv.removeChild(adbanner);
+
+        }
     </script>
     
 </body>
