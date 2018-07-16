@@ -16,7 +16,7 @@
         </span> 
     </section>
     <!-- line break -->
-    <hr> 
+</br>
 
     <div class="nav-bar">
         <h1 class="page-title"> Foodar </h1>
@@ -26,51 +26,58 @@
         <a class="menu-items"><p>...</p></a>
     
     </div>
-    <hr>
+</br>
     <div class = "wrap">
         <img src ="https://www.budgetbytes.com/wp-content/uploads/2018/06/Beef-Kofta-Meatballs-with-Roasted-Vegetables-finished-768x576.jpg" alt ="vintage airmail envelope"> 
-    <div class = "text_over_image">SHNACK TIME</div> 
+    <div class = "text_over_image">ITS MEAL TIME</div> 
     </div>
     <div class="driver">
         <h1> Find a driver near you</h1>
         <p> Type in your zipcode below and click Go! to find a driver near you</p>
         <input maxlength="5" type="text" id="zipPut" ></input> 
-        <button id="zipcodes" >go</button>
+        <button id="zipcodes" >Go</button>
     </br>
-        <p id ="zipResult" > 122</p>
+        <p id ="zipResult" ></p>
     </div>
     <footer>
-            <div id = "footer-menu">
-                    <ul class="footer-list">
-                <li> <a href="home.html" target = "_blank">
+
+      <table>
+        <tr>
+            <td id = "footer-menu">
+                <a href="home.html" target = "_blank">
                     <p> Home</p>
                 </a>
-                </li>
-                <li><a href="register.html" target = "_blank">
+            </td>
+            <td>
+                <a href="#" target = "_blank">
+                    <p> Privacy Policy</p>
+                </a>
+            </td>
+            <td>
+             <p>  &copy 2015 All Rights reserved</p> 
+            </td>
+        </tr>
+        <tr>
+            <td id = "footer-menu">
+                <a href="register.html" target = "_blank">
                     <p> Register</p>
                 </a>
-                </li>
-                <li> <a href="about.html" target = "_blank">
-                    <p> How it all Works  </p>
-                </a>
-                </li>
-                </ul>
-                </div>
-            <div class="privacy">
-                <ul>
-                    <li><a href="#" target = "_blank">
-                        <p> Privacy Policy</p>
-                    </a></li>
-                    <li><a href="#" target = "_blank">
-                        <p> Terms & Conditions </p>
-                        </a></li>
-                </ul>
-            </div>
-        <div class = "copyright"> 
-                <p> (C) 2015 All Rights reserved</p>
-    
-        </div>
-      
+            </td>
+            <td>
+                <a href="#" target = "_blank">
+                    <p> Terms & Conditions </p>
+                    </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id = "footer-menu"><a href="about.html" target = "_blank">
+                <p> How it all Works  </p>
+            </a>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
       </table>
     </footer>
 <script>
@@ -78,7 +85,7 @@
 var useableZipCodes= ["53188", "53207", "53154"] 
 
 //access zipcode input section 
-var zipInput = document.getElementById("zipPut")
+var zipInput = document.getElementById("zipcodes")
 //console.log(zipInput); 
 var testZip=document.getElementById("zipPut").value
     console.log(testZip);

@@ -1,6 +1,7 @@
 html {
 margin: 75px;
 }
+/**** TOP OF PAGE ****/
 header {
 background-color:#50343C;
 color: #Dea5Ae;
@@ -17,7 +18,21 @@ body {
 .banner {
 display: inline-block;
 width: 100%;
-height:100%;
+height:100px;
+border-bottom:3px solid black;
+background-color: #50343C;
+  color: #C4A464;
+}
+#adBanner{
+display:inline-block;
+}
+#clear {
+float:right;
+  overflow: hidden;
+}
+
+.underline{
+  border-bottom: 5px solid black;
 }
 /* center items in page  - nav bar area */
 .nav-bar {
@@ -33,12 +48,26 @@ text-align: left;
 float: left; 
 
 } 
+/* style the header a bit */
+.header{
+color: #Dea5Ae;
+background-color: #50343C;
+height: 50px;
+}
+
 /* center header ---> */
  h1, h2 {
    text-align: center;
    /*no margin*/
    margin:0;
  }
+
+ .fill-request{ 
+  background-color: #Dea5Ae;
+  color: white;
+  height: 50px;
+}
+
 
  /*center envelope*/
 
@@ -48,9 +77,7 @@ float: left;
    margin-right:auto;
    width:90%;
  }
-span {
-border-bottom:3px solid black
- }
+
 h1, p, h2{
 font-family:  "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -65,8 +92,13 @@ p{
 a {
 color:#F3F5F3;
 text-decoration: none;
-
 }
+/****** center text ******/
+
+.center {
+text-align: center;
+}
+
 
 /* style the driver****/
 
@@ -96,47 +128,23 @@ footer nav {
   margin:0 auto;
   text-align: center;
 }
+/**** set up table layout ****/
+table{
+  width:100%;
+  table-layout:fixed;
+}
+td {
+width:33%;
+text-align:center;
+}
+/***** white text for all data texts ***/
+
+td p{
+  color:white;
+}
 
 
-footer ul, footer p{
-color: #F3F5F3;
-}
-.footer-list {
-display: inline-block;
-width:100%;
-}
-.copyright {
-  display: inline-block;
-  width: 25%;
-}
-.footer-menu {
-display:inline-block;
-width:30%;
-text-align: left;
-}
-.footer-list{
-padding: 0 ;
-}
-footer ul p {
-text-align:left; 
-margin:5px;
-}
-.copyright{
-display:inline-block;
-margin:0 auto;
-width:30%;
-text-align: right;
-float: right; 
-}
-.privacy {
-display: inline-block;
-width: 30%;
-}
-.privacy ul{
-padding:0;
-margin:0;
-}
-.footer-menu a p:hover {
+#footer-menu p:hover {
 color:black; 
 background-color:white;
 }

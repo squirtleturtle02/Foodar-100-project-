@@ -11,21 +11,22 @@
 </head> 
 <body>
     <!-- BANNER -->
+    <button id="clear" type="button"> Clear Banner </button>
+</br>
         <div id="banner">
                      
-                <button id="clear" type="button"> Clear Banner </button>
+               
         </div>      
+   
 <section class="header">
     <h1>SUBMIT YOUR REQUEST</h1>
 </section>
-<br> 
 <h2 class = "fill-request"> Please Fill out the Form Below</h2>
 
-<section> <p>Email Address</p></section>
-<br> 
+<h3>Email Address</h3>
 <input type="email" name="email" placeholder="email"/> 
 <br>
-<p>Choose your style: </p>
+<h3>Choose your style: </h3>
 <div class="Choose-your-style"> 
         <form name="food"> 
     <ul>
@@ -85,6 +86,49 @@
 
 <h2 id="total">Total:</h2> 
 <button> request </button>
+</br>
+</br>
+<footer>
+
+        <table>
+          <tr>
+              <td id = "footer-menu">
+                  <a href="home.html" target = "_blank">
+                      <p> Home</p>
+                  </a>
+              </td>
+              <td>
+                  <a href="#" target = "_blank">
+                      <p> Privacy Policy</p>
+                  </a>
+              </td>
+              <td>
+               <p>  &copy 2015 All Rights reserved</p> 
+              </td>
+          </tr>
+          <tr>
+              <td id = "footer-menu">
+                  <a href="register.html" target = "_blank">
+                      <p> Register</p>
+                  </a>
+              </td>
+              <td>
+                  <a href="#" target = "_blank">
+                      <p> Terms & Conditions </p>
+                      </a>
+              </td>
+              <td></td>
+          </tr>
+          <tr>
+              <td id = "footer-menu"><a href="about.html" target = "_blank">
+                  <p> How it all Works  </p>
+              </a>
+              </td>
+              <td></td>
+              <td></td>
+          </tr>
+        </table>
+      </footer>
 <script>
         //set a query selector on all input values 
          var costList=document.querySelectorAll(".cost-request");
