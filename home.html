@@ -21,7 +21,7 @@
     <div class="nav-bar">
         <h1 class="page-title"> Foodar </h1>
         
-        <a class="menu-items"><p>Sign-in / Register</p></a>
+        <a class="menu-items" href="#" target = "_blank"><p>Sign-in / Register</p></a>
         <p class="menu-items"> | </p>
         <a class="menu-items"><p>...</p></a>
     
@@ -34,11 +34,13 @@
     <div class="driver">
         <h1> Find a driver near you</h1>
         <p> Type in your zipcode below and click Go! to find a driver near you</p>
-        <input maxlength="5"></input> 
-        <button>go</button>
+        <input maxlength="5" type="text" id="zipPut" ></input> 
+        <button id="zipcodes" >go</button>
+    </br>
+        <p id ="zipResult" > 122</p>
     </div>
     <footer>
-            <div class = "footer-menu">
+            <div id = "footer-menu">
                     <ul class="footer-list">
                 <li> <a href="home.html" target = "_blank">
                     <p> Home</p>
@@ -70,6 +72,31 @@
         </div>
       
     </footer>
+<script>
 
+var useableZipCodes= ["53188", "53207", "53154"] 
+
+//access zipcode input section 
+var zipInput = document.getElementById("zipPut")
+//console.log(zipInput); 
+var testZip=document.getElementById("zipPut").value
+    console.log(testZip);
+//add event listener 
+zipInput.addEventListener("click", function() {
+   
+    //test the value against the zipcode array 
+    for (var i=0; i <useableZipCodes.length; i++) {
+        var testZip=document.getElementById("zipPut").value
+    console.log(testZip);
+        var inputText =  document.getElementById("zipResult")
+        if(testZip == useableZipCodes[i]) {
+            document.getElementById("zipResult").innerHTML="We’ve got your area covered!"
+        } else {
+            document.getElementById("zipResult").innerHTML="Sorry, we haven’t expanded to that area yet."
+        }
+    }
+}
+)
+</script>
 
 </body> 
