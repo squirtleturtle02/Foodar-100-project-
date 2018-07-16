@@ -68,7 +68,11 @@ height: 50px;
   height: 50px;
 }
 
-
+/**** register page - REgister link - ****/
+.register-Link {
+text-decoration:none;
+color:black;
+}
  /*center envelope*/
 
  .img {
@@ -110,7 +114,17 @@ text-align: left;
 margin-left:10px;
 }
 
+/*****added  padding to show up between placeholder text and 
+the input box****/
+.inpadding{
+  padding:10px;
+  margin:5px;
+}
 
+.wrapper{
+  margin:3px;
+text-align: center;
+} 
  /******** Footer **************/
  
 footer {

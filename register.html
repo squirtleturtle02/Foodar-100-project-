@@ -1,7 +1,7 @@
 <!DOCTYPE HTML> 
 
 <head>
-<title> Registration Page</title>
+<title> Register</title>
 <meta charset = "utf-8">
 <link rel="stylesheet" href="formStyle.css" type="text/css"/>
 <link rel="stylesheet" href="style.css" type="text/css"/>
@@ -18,29 +18,33 @@
             <fieldset>
                 <legend > Details</legend>
                 <label> Email: 
-                    <input type="email" placeholder="email" Required/></br>
+                    <input class="inpadding" type="email" placeholder="email" required/></br>
                 </label>
                 <label> Password: 
-                    <input type = "password" placeholder="password" required/> </br>
+                    <input class="inpadding" type = "password" placeholder="password" required/> </br>
                 </label>
                 <label> First Name: 
-                    <input type = "text " placeholder = "first Name" required></br>
+                    <input class="inpadding" type = "text " placeholder = "First Name" required></br>
                 </label>
                 <label for="lastname"> Last Name: </label> 
-                    <input  id ="lastname "type="text" placeholder="Last Name" required/></br>
+                    <input class="inpadding" id ="lastname "type="text" placeholder="Last Name" required/></br>
                 </label> 
             </fieldset> 
         </div>
     <div class="address">
     <fieldset>
          <legend>Address</legend>
-         <input type = "text" name="address-1" placeholder="address-line-1" required/></br>
-         <input type = "text" name="address-2" placeholder="address-line-2"/></br>
-         <input type = "text" name="city" placeholder="city" required/></br>
-         <input type = "text" name="state" placeholder="state" required/></br>
-         <input type = "text" name="zipcode" placeholder="zipcode" required/></br>
+         <input class="inpadding" type = "text" name="address-1" placeholder="Address-line-1" required/></br>
+         <input class="inpadding" type = "text" name="address-2" placeholder="Address-line-2"/></br>
+         <input class="inpadding" type = "text" name="city" placeholder="City" required/></br>
+         <input class="inpadding" type = "text" name="state" placeholder="State" required/></br>
+         <input class="inpadding" type = "text" name="zipcode" placeholder="Zipcode" required/></br>
      </fieldset>
     </div>
+</div>
+<div class="wrapper">
+    <button class="submitRegistration" type="submit">Register
+    </button>
 </div>
 <footer>
         <footer>
